@@ -6,7 +6,7 @@ import {
 } from "@tarojs/taro";
 import { useStore } from "@store/utils";
 import { getAuthorized } from "@utils/tools";
-import ApiConfig from "@utils/apiConfig";
+import ApiConfig from "@utils/api";
 export const imgUrl = ApiConfig.img_url;
 export const apiUrl = ApiConfig.api_url;
 export const fileUrl = ApiConfig.file_url;

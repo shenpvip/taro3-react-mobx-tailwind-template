@@ -23,6 +23,7 @@
       "@components/*": ["./src/components/*"],
       "@utils/*": ["./src/utils/*"],
       "@store/*": ["./src/store/*"],
+      "@router/*": ["./src/router/*"],
       "@assets/*": ["./src/assets/*"],
       "@server/*": ["./src/server/*"]
     }

@@ -38,10 +38,17 @@ const config = {
       }
     }
   },
+  sass: {
+    resource: [
+      path.resolve(__dirname, "..", "src/assets/style/base.scss"),
+      path.resolve(__dirname, "..", "src/assets/style/color.scss")
+    ]
+  },
   alias: {
     "@components": path.resolve(__dirname, "..", "src/components"),
     "@utils": path.resolve(__dirname, "..", "src/utils"),
     "@store": path.resolve(__dirname, "..", "src/store"),
+    '@router': path.resolve(__dirname, '..', 'src/router'),
     "@assets": path.resolve(__dirname, "..", "src/assets"),
     "@server": path.resolve(__dirname, "..", "src/server")
   },
