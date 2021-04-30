@@ -1,8 +1,7 @@
 {
-  "name": "taro-template",
-  "version": "1.0.0",
-  "private": true,
-  "description": "taro-template",
+  "name": "taro-template-3.0",
+  "version": "1.0.1",
+  "description": "taro-template-3.0",
   "templateInfo": {
     "name": "default",
     "typescript": true,
@@ -29,12 +28,24 @@
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "test": "jest --config jest.config.js --no-cache"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shenpvip/taro-template.git"
+  },
+  "keywords": [
+    "taro3",
+    "taro-template",
+    "mobx",
+    "taro-ui",
+    "jest"
+  ],
   "browserslist": [
     "last 3 versions",
     "Android >= 4.1",
     "ios >= 8"
   ],
-  "author": "",
+  "author": "shenpvip",
+  "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
     "@tarojs/cli": "^3.2.5",
