@@ -18,7 +18,7 @@
   - [x] iconfont 支持(替换为自己的iconfont文件)
   - [x] 单元测试(jest+enzyme)
 - 接口请求
-  - [x] request 类
+  - [x] request 封装
   - [x] 拦截器
 - 工程化
   - [x] ts 文件路径 alias
