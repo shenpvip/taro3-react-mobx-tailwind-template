@@ -6,12 +6,16 @@ import "./index.scss";
 
 const Index = () => {
   const { GlobalStore } = useStore();
+  const onBtnClick = () =>{
+    GlobalStore.setCustomerName('Taro')
+  }
   return (
     <View className="index">
       <Text>Hello world!{GlobalStore.customerName}</Text>
       <View className="price">200</View>
+      <View className="text">定位</View>
       <QUIcon icon="icon-bangzhu" />
-      <AtButton type="primary">按钮</AtButton>
+      <AtButton type="primary" onClick={onBtnClick}>按钮</AtButton>
     </View>
   );
 };
