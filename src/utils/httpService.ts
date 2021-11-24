@@ -4,7 +4,7 @@ import {
   showToast,
   uploadFile
 } from "@tarojs/taro";
-import { useStore } from "@store/utils";
+import GlobalStore from "@store/GlobalStore";
 import { getAuthorized } from "@utils/tools";
 import ApiConfig from "@utils/api";
 export const imgUrl = ApiConfig.img_url;
@@ -37,8 +37,6 @@ const interceptor = function(chain) {
   const requestParams = chain.requestParams;
   const { url } = requestParams;
   const isNeedSetToken = !(url && url.includes("login"));
-  const { GlobalStore } = useStore();
-
   if (isNeedSetToken && GlobalStore) {
     requestParams.header = {
       ...requestParams.header,
@@ -77,7 +75,6 @@ function request(
 ) {
   const newOptions = { ...options };
   if (isFile) {
-    const { GlobalStore } = useStore();
     newOptions.header = {
       "Content-Type": "multipart/form-data",
       Authorization: GlobalStore.token || "",

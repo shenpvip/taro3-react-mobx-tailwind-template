@@ -2,11 +2,11 @@ import httpService, { IApiData } from "@utils/httpService";
 
 export interface IMODApiData extends IApiData {}
 const apiUrl = {
-  mallCartSum: "/v1/mall/cart/mallCartSum"
+  getList: "/xxx"
 };
 
-const mallCartSum = () => httpService.get(apiUrl.mallCartSum);
+const getList = () => httpService.get(apiUrl.getList);
 
 export default {
-  mallCartSum
+  getList
 };
