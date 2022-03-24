@@ -32,7 +32,7 @@ export interface IApiData {
   code: ECode;
   msg: string;
 }
-type TOptions = Omit<_request.Option<any>, "url">;
+type TOptions = Omit<Taro.request.Option<any>, "url">;
 const interceptor = function(chain) {
   const requestParams = chain.requestParams;
   const { url } = requestParams;
@@ -70,7 +70,7 @@ function checkResponse(response: IApiData) {
 }
 function request(
   url: string,
-  options: uploadFile.Option | TOptions,
+  options: Taro.uploadFile.Option | TOptions,
   isFile?: boolean
 ) {
   const newOptions = { ...options };
@@ -81,10 +81,10 @@ function request(
       ...newOptions.header
     };
     return uploadFile({
-      ...(newOptions as uploadFile.Option),
+      ...(newOptions as Taro.uploadFile.Option),
       url: ApiConfig.file_url + url
     })
-      .then(async res => {
+      .then(async (res: any) => {
         return await checkResponse(
           (JSON.parse(res.data) as unknown) as IApiData
         );
