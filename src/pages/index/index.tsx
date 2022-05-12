@@ -1,7 +1,7 @@
-import { View, Text } from "@tarojs/components";
+import { View, Text, Button } from "@tarojs/components";
 import { useStore, observer } from "@store/utils";
 import QUIcon from "@components/QUIcon";
-import { Button } from "@taroify/core";
+import { Cell } from "@taroify/core";
 import "./index.scss";
 
 const Index = () => {
@@ -16,7 +16,12 @@ const Index = () => {
       <View className="price">200</View>
       <View className="text">定位</View>
       <QUIcon icon="icon-bangzhu" />
-      <Button color="primary" onClick={onBtnClick}>主要按钮</Button>
+      <Cell title="单元格" brief="描述信息" size="large">
+        内容
+      </Cell>
+      <Button type="primary" onClick={onBtnClick}>
+        主要按钮
+      </Button>
     </View>
   );
 };

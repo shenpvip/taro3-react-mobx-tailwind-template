@@ -1,21 +1,15 @@
-import * as PropTypes from "prop-types";
-import { View } from "@tarojs/components";
-import { AtButton } from "taro-ui";
-
-const Experiment = props => {
+import { Button } from "@tarojs/components";
+interface IProps {
+  handleClick: () => void;
+}
+const Experiment = (props: IProps) => {
   const { handleClick } = props;
 
   return (
-    <View className="index">
-      <AtButton className="notification" type="secondary" onClick={handleClick}>
-        点击显示通知
-      </AtButton>
-    </View>
+    <Button className="notification" type="warn" onClick={handleClick}>
+      点击显示通知
+    </Button>
   );
-};
-
-Experiment.propTypes = {
-  handleClick: PropTypes.func
 };
 
 export default Experiment;
