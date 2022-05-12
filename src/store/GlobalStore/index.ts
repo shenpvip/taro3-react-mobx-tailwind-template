@@ -1,13 +1,13 @@
-import { observable, makeObservable } from "mobx";
+import { makeAutoObservable } from "mobx";
 import Api from "@server/Global";
 
 class GlobalStore {
-  @observable customerId = "";
-  @observable customerName = "Roc";
-  @observable token = "";
+  customerId: string = "";
+  customerName: string = "Roc";
+  token: string = "";
 
   constructor() {
-    makeObservable(this);
+    makeAutoObservable(this, {}, { autoBind: true });
   }
 
   setCustomerName(val: string) {
