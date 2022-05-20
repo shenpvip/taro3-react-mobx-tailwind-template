@@ -1,0 +1,42 @@
+/*吸边悬浮窗*/
+.movableArea {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92%;
+  pointer-events: none; //设置area元素不可点击，则事件便会下移至页面下层元素
+  z-index: 999;
+  .movableView {
+    pointer-events: auto; //可以点击
+    width: 200px;
+    height: 72px;
+  }
+  .home_area {
+    background: linear-gradient(91deg, #9fe1e5 0%, #77d4db 100%);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 200px;
+    height: 72px;
+    line-height: 50px;
+  }
+  .circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+    margin-left: 8px;
+  }
+  .home_title {
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    padding: 10rpx 5rpx;
+    font-weight: bold;
+  }
+}

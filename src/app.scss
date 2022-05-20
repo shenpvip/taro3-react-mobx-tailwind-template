@@ -3,3 +3,11 @@ page {
   --light-color: #d198ff;
   --price-color: #fd6e57;
 }
+
+// iphoneX底部适配
+.fix-iphonex-button {
+  padding-bottom: constant(safe-area-inset-bottom);
+  /*兼容 IOS<11.2*/
+  padding-bottom: env(safe-area-inset-bottom);
+  /*兼容 IOS>11.2*/
+}
