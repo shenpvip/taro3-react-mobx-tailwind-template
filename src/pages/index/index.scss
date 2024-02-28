@@ -4,6 +4,3 @@
     @extend %__priceBefore;
   }
 }
-.text {
-  @include position-absolute(12rpx,12rpx);
-}

@@ -1,28 +1,18 @@
-import { View, Text, Button } from "@tarojs/components";
-import { useStore, observer } from "@store/utils";
-import QUIcon from "@components/QUIcon";
-import { Cell } from "@taroify/core";
+import { View, Text } from "@tarojs/components";
+import { useStore, observer } from "@shared/store/utils";
+import { useEffect } from "react";
+import PageContainer from "@shared/components/PageContainer";
 import "./index.scss";
 
 const Index = () => {
   const { GlobalStore } = useStore();
-  const onBtnClick = () => {
-    GlobalStore.setCustomerName("Taro");
-    GlobalStore.getData();
-  };
+  useEffect(() => {
+    console.log(GlobalStore.customerName);
+  }, []);
   return (
-    <View className="index">
-      <Text>Hello world!{GlobalStore.customerName}</Text>
-      <View className="price">200</View>
-      <View className="text">定位</View>
-      <QUIcon icon="icon-bangzhu" />
-      <Cell title="单元格" brief="描述信息" size="large">
-        内容
-      </Cell>
-      <Button type="primary" onClick={onBtnClick}>
-        主要按钮
-      </Button>
-    </View>
+    <PageContainer className="index">
+      <Text className="text-[#acc855] text-[32px] flex-wrap">Hello world!</Text>
+    </PageContainer>
   );
 };
 

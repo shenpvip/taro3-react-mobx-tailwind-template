@@ -6,29 +6,20 @@ module.exports = {
       "taro",
       {
         framework: "react",
-        ts: true
-      }
-    ]
+        ts: true,
+      },
+    ],
   ],
   plugins: [
     [
       "import",
       {
-        libraryName: "@taroify/core",
-        libraryDirectory: "",
-        style: true
-      },
-      "@taroify/core"
-    ],
-    [
-      "import",
-      {
-        libraryName: "@taroify/icons",
-        libraryDirectory: "",
+        libraryName: "@nutui/nutui-react-taro",
+        libraryDirectory: "dist/esm",
+        style: "css",
         camel2DashComponentName: false,
-        style: () => "@taroify/icons/style"
       },
-      "@taroify/icons"
-    ]
-  ]
+      "nutui-react-taro",
+    ],
+  ],
 };

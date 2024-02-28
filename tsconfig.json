@@ -20,12 +20,7 @@
     "resolveJsonModule": true,
     "typeRoots": ["node_modules/@types", "global.d.ts"],
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@store/*": ["./src/store/*"],
-      "@router/*": ["./src/router/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@server/*": ["./src/server/*"]
+      "@shared/*": ["./src/shared/*"]
     }
   },
   "exclude": ["node_modules", "dist"],
