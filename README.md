@@ -26,7 +26,3 @@
 - 🧬 iconfont 支持(替换为自己的 iconfont 文件)
 - 🌩️ 使用多核心及缓存提升编译速度
 - 💰 更多特性持续迭代中...
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=shenpvip/taro3-react-mobx-tailwind-template&type=Timeline)](https://star-history.com/#shenpvip/taro3-react-mobx-tailwind-template&Timeline)
