@@ -1,12 +1,9 @@
 import { useEffect } from "react";
 import { Provider } from "mobx-react";
 import Taro from "@tarojs/taro";
-import { storesContext } from "@shared/store";
+import store from "@shared/store";
 import "./app.scss";
 
-const store = {
-  storesContext,
-};
 const App = (props) => {
   useEffect(() => {
     if (process.env.TARO_ENV === "weapp") {

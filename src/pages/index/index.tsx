@@ -1,11 +1,10 @@
-import { View, Text } from "@tarojs/components";
-import { useStore, observer } from "@shared/store/utils";
+import { Text } from "@tarojs/components";
 import { useEffect } from "react";
 import PageContainer from "@shared/components/PageContainer";
+import observer, { GlobalStore } from "@shared/store";
 import "./index.scss";
 
 const Index = () => {
-  const { GlobalStore } = useStore();
   useEffect(() => {
     console.log(GlobalStore.customerName);
   }, []);

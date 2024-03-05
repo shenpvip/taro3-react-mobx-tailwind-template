@@ -1,9 +1,4 @@
-import React from "react";
-import GlobalStore, { IGlobalStore } from "./GlobalStore";
+import { observer } from "mobx-react";
 
-export const storesContext = React.createContext({
-  GlobalStore
-});
-export interface IStore {
-  GlobalStore: IGlobalStore;
-}
+export * from "./GlobalStore";
+export default observer;
