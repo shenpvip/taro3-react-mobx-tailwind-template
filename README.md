@@ -1,6 +1,6 @@
 # taro3-react-mobx-tailwind-template
 
-基于 Taro3 的 React 多端项目模版。
+基于 Taro3 的 React 多端项目模版，默认支持编译成微信小程序，其他小程序自行测试
 
 ## 技术栈
 
